@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bevvbe6kasjvc"]
+
+[ext_resource type="Texture2D" uid="uid://bm1wmu8onpue" path="res://sprites/HaloWhite.png" id="1_edxyq"]
+
+[node name="Halo" type="CharacterBody2D"]
+position = Vector2(573, 294)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_edxyq")

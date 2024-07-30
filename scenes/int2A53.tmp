@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://ott8cymvxvwe"]
+
+[ext_resource type="Script" path="res://scripts/interval_game.gd" id="1_dhubq"]
+[ext_resource type="PackedScene" uid="uid://rym22y83e0pf" path="res://scenes/planet.tscn" id="1_erdd8"]
+[ext_resource type="PackedScene" uid="uid://bevvbe6kasjvc" path="res://scenes/halo.tscn" id="2_p6xq2"]
+
+[node name="IntervalGame" type="Node2D"]
+script = ExtResource("1_dhubq")
+
+[node name="Planet" parent="." instance=ExtResource("1_erdd8")]
+position = Vector2(555, 286)
+
+[node name="Planet2" parent="." instance=ExtResource("1_erdd8")]
+position = Vector2(729, 288)
+
+[node name="Planet3" parent="." instance=ExtResource("1_erdd8")]
+position = Vector2(386, 290)
+
+[node name="Halo" parent="." instance=ExtResource("2_p6xq2")]
+position = Vector2(388, 292)
