@@ -1,9 +1,46 @@
-[gd_scene load_steps=2 format=3 uid="uid://bevvbe6kasjvc"]
+[gd_scene load_steps=5 format=3 uid="uid://bevvbe6kasjvc"]
 
 [ext_resource type="Texture2D" uid="uid://bm1wmu8onpue" path="res://sprites/HaloWhite.png" id="1_edxyq"]
+[ext_resource type="Texture2D" uid="uid://cv3dkni7jt4cs" path="res://sprites/HaloGreen.png" id="2_vj864"]
+[ext_resource type="Texture2D" uid="uid://b0voqjxfxi518" path="res://sprites/HaloRed.png" id="3_8ivn6"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0grrf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_vj864")
+}],
+"loop": false,
+"name": &"GreenRing",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.5,
+"texture": ExtResource("3_8ivn6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_edxyq")
+}],
+"loop": false,
+"name": &"RedRing",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_edxyq")
+}],
+"loop": true,
+"name": &"WhiteRing",
+"speed": 5.0
+}]
 
 [node name="Halo" type="CharacterBody2D"]
-position = Vector2(573, 294)
+position = Vector2(0, -93)
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_edxyq")
+[node name="HaloSprite" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(-151, -150)
+sprite_frames = SubResource("SpriteFrames_0grrf")
+animation = &"WhiteRing"
+autoplay = "WhiteRing"
+centered = false

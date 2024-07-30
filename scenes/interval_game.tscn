@@ -8,13 +8,43 @@
 script = ExtResource("1_dhubq")
 
 [node name="Planet" parent="." instance=ExtResource("1_erdd8")]
-position = Vector2(555, 286)
+position = Vector2(95, 545)
 
 [node name="Halo" parent="Planet" instance=ExtResource("2_p6xq2")]
-position = Vector2(-167, 6)
+position = Vector2(0, 0)
 
 [node name="Planet2" parent="." instance=ExtResource("1_erdd8")]
-position = Vector2(729, 288)
+position = Vector2(280, 482)
+
+[node name="Halo" parent="Planet2" instance=ExtResource("2_p6xq2")]
+position = Vector2(1, -1)
 
 [node name="Planet3" parent="." instance=ExtResource("1_erdd8")]
-position = Vector2(386, 290)
+position = Vector2(460, 412)
+
+[node name="Halo" parent="Planet3" instance=ExtResource("2_p6xq2")]
+position = Vector2(3, 0)
+
+[node name="Planet4" parent="." instance=ExtResource("1_erdd8")]
+position = Vector2(625, 345)
+
+[node name="Halo" parent="Planet4" instance=ExtResource("2_p6xq2")]
+position = Vector2(1, -1)
+
+[node name="Planet5" parent="." instance=ExtResource("1_erdd8")]
+position = Vector2(773, 279)
+
+[node name="Halo" parent="Planet5" instance=ExtResource("2_p6xq2")]
+position = Vector2(1, -1)
+
+[node name="Planet6" parent="." instance=ExtResource("1_erdd8")]
+position = Vector2(910, 206)
+
+[node name="Halo" parent="Planet6" instance=ExtResource("2_p6xq2")]
+position = Vector2(1, -1)
+
+[node name="Planet7" parent="." instance=ExtResource("1_erdd8")]
+position = Vector2(1070, 110)
+
+[node name="Halo" parent="Planet7" instance=ExtResource("2_p6xq2")]
+position = Vector2(1, -1)

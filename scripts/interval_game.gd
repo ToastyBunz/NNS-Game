@@ -1,10 +1,13 @@
 extends Node2D
 
 @onready var interval_game = $"."
+@onready var halo = $Planet/Halo
+
 
 const ALPHABET = ["A", "B", "C", "D", "E", "F", "G"]
 var Section1 = []
 var focus = 0
+var planet = 0
 
 var random_int = 0
 
@@ -30,7 +33,9 @@ func prep():
 
 func _ready():
 	Section1 = prep()
-	print(interval_game.get_child(0))
+	print(Section1[focus])
+	interval_game.get_child(planet).get_node("Halo").get_node("HaloSprite").visible = true
+	
 	
 		
 
@@ -47,10 +52,13 @@ func _unhandled_input(event):
 		if event.pressed: 
 			if OS.get_keycode_string(event.key_label) == Section1[focus]:
 				print('great job!')
+				interval_game.get_child(planet).get_node("Halo").get_node("HaloSprite").play("GreenRing")
 				focus += 1
+				planet += 1
+				interval_game.get_child(planet).get_node("Halo").get_node("HaloSprite").visible = true
 			else:
 				print('dang it')
-				print(Section1[focus], OS.get_keycode_string(event.key_label))
+				interval_game.get_child(planet).get_node("Halo").get_node("HaloSprite").play("RedRing")
 #
 #func _input(event):
 	#print(event)
