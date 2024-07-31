@@ -39,8 +39,10 @@ position = Vector2(0, -93)
 
 [node name="HaloSprite" type="AnimatedSprite2D" parent="."]
 visible = false
-position = Vector2(-151, -150)
+position = Vector2(-120, -122)
+scale = Vector2(0.8, 0.8)
 sprite_frames = SubResource("SpriteFrames_0grrf")
 animation = &"WhiteRing"
 autoplay = "WhiteRing"
+frame_progress = 0.637544
 centered = false

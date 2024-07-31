@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://etrf6rjufvlk"]
+
+[ext_resource type="Script" path="res://scripts/Label.gd" id="1_thy4b"]
+
+[node name="Hud" type="Node"]
+
+[node name="Sector_Label" type="Label" parent="."]
+offset_left = 511.0
+offset_top = 67.0
+offset_right = 606.0
+offset_bottom = 112.0
+text = "Sector A"
+script = ExtResource("1_thy4b")

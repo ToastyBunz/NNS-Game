@@ -1,9 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://ott8cymvxvwe"]
+[gd_scene load_steps=5 format=3 uid="uid://ott8cymvxvwe"]
 
 [ext_resource type="Script" path="res://scripts/interval_game.gd" id="1_dhubq"]
 [ext_resource type="PackedScene" uid="uid://rym22y83e0pf" path="res://scenes/planet.tscn" id="1_erdd8"]
 [ext_resource type="PackedScene" uid="uid://bevvbe6kasjvc" path="res://scenes/halo.tscn" id="2_p6xq2"]
-[ext_resource type="PackedScene" uid="uid://etrf6rjufvlk" path="res://scenes/hud.tscn" id="3_pmah1"]
 [ext_resource type="Texture2D" uid="uid://m2g15cxpp7ik" path="res://sprites/SpaceHolder.png" id="4_imkta"]
 
 [node name="IntervalGame" type="Node2D"]
@@ -19,8 +18,6 @@ offset_bottom = 645.0
 position = Vector2(576.25, 323.5)
 scale = Vector2(0.191917, 0.154567)
 texture = ExtResource("4_imkta")
-
-[node name="Hud" parent="." instance=ExtResource("3_pmah1")]
 
 [node name="planets" type="Node" parent="."]
 
