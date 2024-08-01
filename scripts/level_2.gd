@@ -42,6 +42,7 @@ func prep():
 	
 # ADDED x
 func get_planets(num_planets, total_planets):
+	active_planets = []
 	var y = len(total_planets) - 1
 	for i in num_planets:
 		var z = randi_range(0, y)

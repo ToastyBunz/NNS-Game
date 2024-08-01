@@ -42,6 +42,7 @@ func prep():
 	
 # ADDED x
 func get_planets(num_planets, total_planets):
+	active_planets = []
 	var y = len(total_planets) - 1
 	for i in num_planets:
 		var z = randi_range(0, y)
@@ -56,6 +57,20 @@ func get_planets(num_planets, total_planets):
 	
 func solar_size():
 	rand_planets = randi_range(1, 6)
+	
+	
+func planet_height():
+	var width = 0
+	for j in range(7):
+		if j in active_planets:
+			var loc = active_planets.find(j)
+			print('loc', loc)
+			width = round((Wscreen - 30) / 7 * loc) + 100
+		else:
+			width = round((Wscreen - 30) / 7 * j) + 100
+		
+		var hight = round((Hscreen - 30) / 7 * (7 - j)) - 30
+		planets.get_child(j).position = Vector2(width, hight)
 	
 	
 ## Called when the node enters the scene tree for the first time.
@@ -73,21 +88,17 @@ func _ready():
 	planets.get_child(active_planets[0]).get_node("Halo").get_node("HaloSprite").visible = true
 	
 	# organize the planets on the appropriate x, y 
-	for j in range(7):
-		# hight gose inversly
-		# need to set hight based on what interval it is
-		var width = 0
-		if j in active_planets:
-			var loc = active_planets.find(j)
-			width = round((Wscreen - 30) / 7 * loc) + 100
-		else:
-			width = round((Wscreen - 30) / 7 * j) + 100
-			
-		var hight = round((Hscreen - 30) / 7 * (7 - j)) - 30
-		planets.get_child(j).position = Vector2(width, hight)
-		
+	
+	# hight gose inversly
+	# need to set hight based on what interval it is
+	
+	#XXXXXXXXXXXXXXXX
+	planet_height()
+
+	for i in range(7):
 		#draw horizontal lines
 		var line = Line2D.new()
+		var hight = round((Hscreen - 30) / 7 * (7 - i)) - 30
 		line.points = [Vector2(0, hight), Vector2(get_viewport().size.x, hight)]
 		line.width = 2
 		line.default_color = Color(1, 1, 1)  # White color
@@ -108,6 +119,8 @@ func reset_level():
 	solar_size()
 	get_planets(rand_planets, Section1)
 	hud.get_node("Sector_Label").new_sector(Section1[0])
+	
+	planet_height()
 	
 	for planet_tile in range(7):
 		if planet_tile not in active_planets:
