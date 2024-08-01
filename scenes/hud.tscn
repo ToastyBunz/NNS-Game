@@ -1,13 +1,47 @@
-[gd_scene load_steps=2 format=3 uid="uid://etrf6rjufvlk"]
+[gd_scene load_steps=4 format=3 uid="uid://etrf6rjufvlk"]
 
 [ext_resource type="Script" path="res://scripts/Label.gd" id="1_thy4b"]
+[ext_resource type="Script" path="res://scripts/Score_label.gd" id="2_ice8y"]
+[ext_resource type="Script" path="res://scripts/level_label.gd" id="3_wsqjy"]
 
 [node name="Hud" type="Node"]
 
 [node name="Sector_Label" type="Label" parent="."]
-offset_left = 511.0
-offset_top = 67.0
-offset_right = 606.0
-offset_bottom = 112.0
+anchors_preset = -1
+anchor_left = 0.48
+anchor_top = 0.15
+anchor_right = 0.48
+anchor_bottom = 0.15
+offset_left = -119.96
+offset_top = -41.2
+offset_right = 121.04
+offset_bottom = 41.8
+theme_override_font_sizes/font_size = 60
 text = "Sector A"
 script = ExtResource("1_thy4b")
+
+[node name="Score_label" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.131
+anchor_top = 0.199
+anchor_right = 0.131
+anchor_bottom = 0.199
+offset_left = -52.912
+offset_top = -19.952
+offset_right = 52.088
+offset_bottom = 20.048
+text = "Score: "
+script = ExtResource("2_ice8y")
+
+[node name="level_label" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.132
+anchor_top = 0.119
+anchor_right = 0.132
+anchor_bottom = 0.119
+offset_left = -54.064
+offset_top = -15.112
+offset_right = 50.936
+offset_bottom = 24.888
+text = "Score: "
+script = ExtResource("3_wsqjy")

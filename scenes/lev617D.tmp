@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://1qvb1p7t08xe"]
+
+[ext_resource type="Script" path="res://scripts/Level_1.gd" id="1_do6fh"]
+[ext_resource type="PackedScene" uid="uid://tmsdkwr7xik0" path="res://scenes/interval_background.tscn" id="2_iansw"]
+[ext_resource type="PackedScene" uid="uid://etrf6rjufvlk" path="res://scenes/hud.tscn" id="3_yhevy"]
+[ext_resource type="PackedScene" uid="uid://kujwlktyw3mf" path="res://scenes/planets.tscn" id="4_bls6c"]
+
+[node name="Level_1" type="Node2D"]
+script = ExtResource("1_do6fh")
+
+[node name="Interval_Background" parent="." instance=ExtResource("2_iansw")]
+position = Vector2(1, 2)
+
+[node name="Hud" parent="." instance=ExtResource("3_yhevy")]
+
+[node name="Planets" parent="." instance=ExtResource("4_bls6c")]
+position = Vector2(1, 1)

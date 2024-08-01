@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://tmsdkwr7xik0"]
+
+[ext_resource type="Texture2D" uid="uid://m2g15cxpp7ik" path="res://sprites/SpaceHolder.png" id="1_2vlyx"]
+
+[node name="Interval_Background" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1151.0
+offset_bottom = 645.0
+
+[node name="SpaceHolder" type="Sprite2D" parent="ColorRect"]
+position = Vector2(576.25, 322.5)
+scale = Vector2(0.191917, 0.155048)
+texture = ExtResource("1_2vlyx")

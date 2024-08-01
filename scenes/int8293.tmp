@@ -1,0 +1,72 @@
+[gd_scene load_steps=7 format=3 uid="uid://ott8cymvxvwe"]
+
+[ext_resource type="Script" path="res://scripts/interval_game.gd" id="1_dhubq"]
+[ext_resource type="PackedScene" uid="uid://rym22y83e0pf" path="res://scenes/planet.tscn" id="1_erdd8"]
+[ext_resource type="PackedScene" uid="uid://bevvbe6kasjvc" path="res://scenes/halo.tscn" id="2_p6xq2"]
+[ext_resource type="PackedScene" uid="uid://etrf6rjufvlk" path="res://scenes/hud.tscn" id="3_pmah1"]
+[ext_resource type="Texture2D" uid="uid://m2g15cxpp7ik" path="res://sprites/SpaceHolder.png" id="4_imkta"]
+[ext_resource type="PackedScene" uid="uid://1qvb1p7t08xe" path="res://scenes/level_1.tscn" id="6_erpdq"]
+
+[node name="IntervalGame" type="Node2D"]
+script = ExtResource("1_dhubq")
+
+[node name="Background" type="Node" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Background"]
+offset_right = 1151.0
+offset_bottom = 645.0
+
+[node name="SpaceHolder" type="Sprite2D" parent="Background/ColorRect"]
+position = Vector2(576.25, 323.5)
+scale = Vector2(0.191917, 0.154567)
+texture = ExtResource("4_imkta")
+
+[node name="Hud" parent="." instance=ExtResource("3_pmah1")]
+
+[node name="planets" type="Node" parent="."]
+
+[node name="Planet" parent="planets" instance=ExtResource("1_erdd8")]
+position = Vector2(164, 545)
+
+[node name="Halo" parent="planets/Planet" instance=ExtResource("2_p6xq2")]
+position = Vector2(0, 0)
+
+[node name="Planet2" parent="planets" instance=ExtResource("1_erdd8")]
+position = Vector2(328, 482)
+
+[node name="Halo" parent="planets/Planet2" instance=ExtResource("2_p6xq2")]
+position = Vector2(1, -1)
+
+[node name="Planet3" parent="planets" instance=ExtResource("1_erdd8")]
+position = Vector2(492, 412)
+
+[node name="Halo" parent="planets/Planet3" instance=ExtResource("2_p6xq2")]
+position = Vector2(3, 0)
+
+[node name="Planet4" parent="planets" instance=ExtResource("1_erdd8")]
+position = Vector2(656, 345)
+
+[node name="Halo" parent="planets/Planet4" instance=ExtResource("2_p6xq2")]
+position = Vector2(1, -1)
+
+[node name="Planet5" parent="planets" instance=ExtResource("1_erdd8")]
+position = Vector2(820, 279)
+
+[node name="Halo" parent="planets/Planet5" instance=ExtResource("2_p6xq2")]
+position = Vector2(1, -1)
+
+[node name="Planet6" parent="planets" instance=ExtResource("1_erdd8")]
+position = Vector2(984, 206)
+
+[node name="Halo" parent="planets/Planet6" instance=ExtResource("2_p6xq2")]
+position = Vector2(1, -1)
+
+[node name="Planet7" parent="planets" instance=ExtResource("1_erdd8")]
+position = Vector2(1148, 110)
+
+[node name="Halo" parent="planets/Planet7" instance=ExtResource("2_p6xq2")]
+position = Vector2(1, -1)
+
+[node name="Levels" type="Node" parent="."]
+
+[node name="Level_1" parent="Levels" instance=ExtResource("6_erpdq")]
