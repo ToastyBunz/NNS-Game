@@ -15,9 +15,17 @@ run/main_scene="res://scenes/interval_game.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[audio]
+
+driver/enable_input=true
+
 [autoload]
 
 Global="*res://scripts/Global.gd"
+
+[display]
+
+window/stretch/mode="canvas_items"
 
 [rendering]
 
