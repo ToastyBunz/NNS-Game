@@ -1,0 +1,76 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0vwifqyy0qub"]
+
+[ext_resource type="Script" path="res://explosion.gd" id="1_pkgwx"]
+
+[sub_resource type="Curve" id="Curve_jwlu8"]
+_data = [Vector2(0.117978, 1), 0.0, 0.0, 0, 0, Vector2(0.803371, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[node name="explosion" type="Node2D"]
+script = ExtResource("1_pkgwx")
+
+[node name="small_particles" type="CPUParticles2D" parent="."]
+emitting = false
+amount = 20
+one_shot = true
+explosiveness = 1.0
+direction = Vector2(-1, 0)
+spread = 110.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 50.0
+initial_velocity_max = 100.0
+scale_amount_min = 4.0
+scale_amount_max = 6.0
+scale_amount_curve = SubResource("Curve_jwlu8")
+
+[node name="white_smoke" type="CPUParticles2D" parent="."]
+z_index = 2
+emitting = false
+amount = 20
+one_shot = true
+explosiveness = 1.0
+direction = Vector2(-1, 0)
+spread = 120.0
+gravity = Vector2(-150, 0)
+initial_velocity_min = 20.0
+initial_velocity_max = 40.0
+radial_accel_min = 20.0
+radial_accel_max = 20.0
+scale_amount_min = 12.0
+scale_amount_max = 16.0
+scale_amount_curve = SubResource("Curve_jwlu8")
+
+[node name="orange_smoke" type="CPUParticles2D" parent="."]
+emitting = false
+amount = 20
+one_shot = true
+explosiveness = 1.0
+direction = Vector2(-1, 0)
+spread = 120.0
+gravity = Vector2(-150, 0)
+initial_velocity_min = 20.0
+initial_velocity_max = 40.0
+radial_accel_min = 20.0
+radial_accel_max = 20.0
+scale_amount_min = 12.0
+scale_amount_max = 16.0
+scale_amount_curve = SubResource("Curve_jwlu8")
+color = Color(0.709804, 0.403922, 0.254902, 1)
+
+[node name="grey_smoke" type="CPUParticles2D" parent="."]
+z_index = 1
+emitting = false
+amount = 20
+one_shot = true
+explosiveness = 1.0
+direction = Vector2(-1, 0)
+spread = 180.0
+gravity = Vector2(-150, 0)
+initial_velocity_min = 10.0
+initial_velocity_max = 20.0
+radial_accel_min = 20.0
+radial_accel_max = 20.0
+scale_amount_min = 5.0
+scale_amount_max = 10.0
+scale_amount_curve = SubResource("Curve_jwlu8")
+color = Color(0.336608, 0.336608, 0.336608, 1)

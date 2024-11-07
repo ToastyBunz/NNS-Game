@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://ott8cymvxvwe"]
-
-[ext_resource type="Script" path="res://scripts/interval_game.gd" id="1_dhubq"]
-
-[node name="IntervalGame" type="Node2D"]
-script = ExtResource("1_dhubq")

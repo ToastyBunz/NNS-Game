@@ -8,41 +8,40 @@
 [node name="Planet" parent="." instance=ExtResource("1_4qkke")]
 position = Vector2(164, 545)
 
-[node name="Halo" parent="Planet" instance=ExtResource("2_m61ym")]
-position = Vector2(0, 0)
+[node name="Halo2" parent="Planet" instance=ExtResource("2_m61ym")]
 
 [node name="Planet2" parent="." instance=ExtResource("1_4qkke")]
 position = Vector2(328, 482)
 
-[node name="Halo" parent="Planet2" instance=ExtResource("2_m61ym")]
+[node name="Halo2" parent="Planet2" instance=ExtResource("2_m61ym")]
 position = Vector2(1, -1)
 
 [node name="Planet3" parent="." instance=ExtResource("1_4qkke")]
 position = Vector2(492, 412)
 
-[node name="Halo" parent="Planet3" instance=ExtResource("2_m61ym")]
+[node name="Halo2" parent="Planet3" instance=ExtResource("2_m61ym")]
 position = Vector2(3, 0)
 
 [node name="Planet4" parent="." instance=ExtResource("1_4qkke")]
-position = Vector2(656, 345)
+position = Vector2(659, 326)
 
-[node name="Halo" parent="Planet4" instance=ExtResource("2_m61ym")]
+[node name="Halo2" parent="Planet4" instance=ExtResource("2_m61ym")]
 position = Vector2(1, -1)
 
 [node name="Planet5" parent="." instance=ExtResource("1_4qkke")]
 position = Vector2(820, 279)
 
-[node name="Halo" parent="Planet5" instance=ExtResource("2_m61ym")]
+[node name="Halo2" parent="Planet5" instance=ExtResource("2_m61ym")]
 position = Vector2(1, -1)
 
 [node name="Planet6" parent="." instance=ExtResource("1_4qkke")]
 position = Vector2(984, 206)
 
-[node name="Halo" parent="Planet6" instance=ExtResource("2_m61ym")]
+[node name="Halo2" parent="Planet6" instance=ExtResource("2_m61ym")]
 position = Vector2(1, -1)
 
 [node name="Planet7" parent="." instance=ExtResource("1_4qkke")]
 position = Vector2(1148, 110)
 
-[node name="Halo" parent="Planet7" instance=ExtResource("2_m61ym")]
+[node name="Halo2" parent="Planet7" instance=ExtResource("2_m61ym")]
 position = Vector2(1, -1)

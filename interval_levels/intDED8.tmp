@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=3 uid="uid://b8211nctwk7h8"]
+
+[ext_resource type="Script" path="res://interval_levels/intro_level.gd" id="1_4gro8"]
+[ext_resource type="PackedScene" uid="uid://tmsdkwr7xik0" path="res://scenes/interval_background.tscn" id="1_r1win"]
+[ext_resource type="PackedScene" uid="uid://c1hmey0ot6hhl" path="res://scenes/hud.tscn" id="3_etmoi"]
+[ext_resource type="PackedScene" uid="uid://0ha6mjsh1dd1" path="res://scenes/level_progress.tscn" id="4_ku8d6"]
+[ext_resource type="PackedScene" uid="uid://rym22y83e0pf" path="res://scenes/planet.tscn" id="5_cb37o"]
+[ext_resource type="PackedScene" uid="uid://ksue0t6f35nl" path="res://scenes/explosion_magazine.tscn" id="6_swbif"]
+
+[node name="Intro_level" type="Node2D"]
+script = ExtResource("1_4gro8")
+
+[node name="Interval_Background" parent="." instance=ExtResource("1_r1win")]
+position = Vector2(-2, -1)
+
+[node name="letters" type="Node2D" parent="."]
+
+[node name="hud" parent="." instance=ExtResource("3_etmoi")]
+position = Vector2(5, 14)
+
+[node name="Level_progress" parent="." instance=ExtResource("4_ku8d6")]
+position = Vector2(398, 25)
+
+[node name="Ships" type="Node2D" parent="."]
+
+[node name="Core_timer" type="Timer" parent="."]
+wait_time = 4.0
+autostart = true
+
+[node name="Planet" parent="." instance=ExtResource("5_cb37o")]
+position = Vector2(-186, 332)
+
+[node name="Explosion_magazine" parent="." instance=ExtResource("6_swbif")]
+position = Vector2(-2, 1)
+
+[connection signal="timeout" from="Core_timer" to="." method="_on_core_timer_timeout"]

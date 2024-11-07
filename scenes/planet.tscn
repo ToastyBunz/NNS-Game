@@ -1,6 +1,7 @@
-[gd_scene load_steps=17 format=3 uid="uid://rym22y83e0pf"]
+[gd_scene load_steps=18 format=3 uid="uid://rym22y83e0pf"]
 
 [ext_resource type="Texture2D" uid="uid://bxlbtbs70c446" path="res://sprites/412149746 (1).png" id="1_0miad"]
+[ext_resource type="PackedScene" uid="uid://bevvbe6kasjvc" path="res://scenes/halo.tscn" id="2_fjo10"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_iws2c"]
 atlas = ExtResource("1_0miad")
@@ -109,9 +110,13 @@ animations = [{
 }]
 
 [node name="Planet" type="CharacterBody2D"]
+scale = Vector2(6, 6)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-32.1667, 55)
 sprite_frames = SubResource("SpriteFrames_kf5ts")
 autoplay = "default"
-frame = 11
-frame_progress = 0.229484
+frame_progress = 0.89098
+
+[node name="Halo" parent="." instance=ExtResource("2_fjo10")]
+position = Vector2(-32, 53)

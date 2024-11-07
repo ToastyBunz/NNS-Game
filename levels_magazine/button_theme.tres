@@ -1,0 +1,23 @@
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://36jd1mpgtxe0"]
+
+[ext_resource type="FontFile" uid="uid://bgvt7v5cyhefk" path="res://Font/Sportive-Italic.ttf" id="1_34rmk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w0van"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_47ckx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rgjfq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m7kle"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kmgrw"]
+
+[resource]
+default_font = ExtResource("1_34rmk")
+Button/colors/font_focus_color = Color(0.0430392, 0.0430392, 0.0430392, 1)
+Button/colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+Button/styles/disabled = SubResource("StyleBoxEmpty_w0van")
+Button/styles/focus = SubResource("StyleBoxEmpty_47ckx")
+Button/styles/hover = SubResource("StyleBoxEmpty_rgjfq")
+Button/styles/normal = SubResource("StyleBoxEmpty_m7kle")
+Button/styles/pressed = SubResource("StyleBoxEmpty_kmgrw")

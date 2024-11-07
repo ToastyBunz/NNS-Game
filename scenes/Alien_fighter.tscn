@@ -1,0 +1,76 @@
+[gd_scene load_steps=7 format=3 uid="uid://c4h6o6nefvhlf"]
+
+[ext_resource type="Texture2D" uid="uid://cwrc88kyqur0d" path="res://sprites/tiny_ship13.png" id="1_8kj2o"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b3qeg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_8kj2o")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_e8gak"]
+blend_mode = 1
+light_mode = 1
+
+[sub_resource type="Curve" id="Curve_r1mno"]
+min_value = -200.0
+max_value = 200.0
+_data = [Vector2(0.129213, 112.088), 0.0, 0.0, 0, 0, Vector2(0.775281, -112.088), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_mci70"]
+_data = [Vector2(0.0730337, 0.967033), 0.0, 0.0, 0, 0, Vector2(0.421348, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_q1iso"]
+
+[node name="Alien_fighter" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+position = Vector2(-1, 0)
+rotation = 4.71239
+sprite_frames = SubResource("SpriteFrames_b3qeg")
+
+[node name="red_thrust" type="CPUParticles2D" parent="CharacterBody2D"]
+material = SubResource("CanvasItemMaterial_e8gak")
+position = Vector2(16, 0)
+amount = 30
+lifetime = 0.75
+emission_shape = 4
+emission_points = PackedVector2Array()
+emission_colors = PackedColorArray()
+gravity = Vector2(980, 0)
+angular_velocity_min = 90.0
+angular_velocity_max = 145.45
+linear_accel_curve = SubResource("Curve_r1mno")
+radial_accel_min = -50.0
+radial_accel_max = -40.0
+scale_amount_min = 3.0
+scale_amount_max = 5.0
+scale_amount_curve = SubResource("Curve_mci70")
+color = Color(0.987648, 0.199934, 5.77569e-07, 1)
+
+[node name="blue_thrust" type="CPUParticles2D" parent="CharacterBody2D"]
+material = SubResource("CanvasItemMaterial_e8gak")
+position = Vector2(15, 0)
+amount = 30
+lifetime = 0.4
+emission_shape = 4
+emission_points = PackedVector2Array()
+emission_colors = PackedColorArray()
+gravity = Vector2(980, 0)
+scale_amount_min = 2.0
+scale_amount_max = 4.0
+scale_amount_curve = SubResource("Curve_mci70")
+color = Color(0.113725, 0.168627, 1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+scale = Vector2(1.39566, 1.02129)
+shape = SubResource("CircleShape2D_q1iso")

@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://tfswklorwqij"]
+
+[ext_resource type="FontFile" uid="uid://dtwjhf4gxq5u2" path="res://Font/Sportive-Regular.ttf" id="1_ol02r"]
+[ext_resource type="Texture2D" uid="uid://cnhjvifwkdu6m" path="res://sprites/Rectangle 130.png" id="2_8rbrb"]
+
+[node name="Letter_instance" type="CharacterBody2D"]
+z_index = 1
+
+[node name="Label" type="Label" parent="."]
+offset_left = -86.0
+offset_top = -27.0
+offset_right = 86.0
+offset_bottom = 33.0
+theme_override_fonts/font = ExtResource("1_ol02r")
+theme_override_font_sizes/font_size = 45
+text = "A
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Bonus_bar" type="Node2D" parent="."]
+scale = Vector2(0.05, 0.05)
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="Bonus_bar"]
+offset_left = -1020.0
+offset_top = 680.0
+offset_right = 980.001
+offset_bottom = 880.0
+texture_under = ExtResource("2_8rbrb")
+texture_progress = ExtResource("2_8rbrb")
+tint_progress = Color(0.142016, 0.852103, 0.419376, 1)

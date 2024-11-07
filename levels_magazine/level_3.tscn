@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://d38on5g2ehpak"]
+
+[ext_resource type="Script" path="res://scripts/level_3.gd" id="1_pcngk"]
+[ext_resource type="PackedScene" uid="uid://tmsdkwr7xik0" path="res://scenes/interval_background.tscn" id="2_efnny"]
+[ext_resource type="PackedScene" uid="uid://rym22y83e0pf" path="res://scenes/planet.tscn" id="3_fekrx"]
+
+[node name="level_3" type="Node2D"]
+script = ExtResource("1_pcngk")
+
+[node name="Interval_Background" parent="." instance=ExtResource("2_efnny")]
+position = Vector2(-1, 0)
+
+[node name="Planet" parent="." instance=ExtResource("3_fekrx")]
+position = Vector2(-1, 0)

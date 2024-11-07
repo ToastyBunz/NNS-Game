@@ -1,0 +1,59 @@
+[gd_scene load_steps=8 format=3 uid="uid://bevvbe6kasjvc"]
+
+[ext_resource type="Script" path="res://scripts/halo.gd" id="1_yc2if"]
+[ext_resource type="Texture2D" uid="uid://cv3dkni7jt4cs" path="res://sprites/HaloGreen.png" id="2_vj864"]
+[ext_resource type="Texture2D" uid="uid://b0voqjxfxi518" path="res://sprites/HaloRed.png" id="3_8ivn6"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w3gf4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_8ivn6")
+}],
+"loop": true,
+"name": &"damaged",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_vj864")
+}],
+"loop": true,
+"name": &"full_power",
+"speed": 5.0
+}]
+
+[sub_resource type="GDScript" id="GDScript_h241t"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xeum1"]
+radius = 82.4934
+
+[sub_resource type="GDScript" id="GDScript_o4kr4"]
+script/source = "extends CollisionShape2D
+
+
+func _on_body_entered(body):
+	pass
+
+"
+
+[node name="Halo" type="CharacterBody2D"]
+scale = Vector2(0.7, 0.7)
+script = ExtResource("1_yc2if")
+
+[node name="Halo_color" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -2)
+scale = Vector2(0.955413, 0.926614)
+sprite_frames = SubResource("SpriteFrames_w3gf4")
+animation = &"damaged"
+autoplay = "full_power"
+
+[node name="Shield_impact" type="Area2D" parent="."]
+script = SubResource("GDScript_h241t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Shield_impact"]
+scale = Vector2(0.997993, 1)
+shape = SubResource("CircleShape2D_xeum1")
+script = SubResource("GDScript_o4kr4")
+
+[connection signal="body_entered" from="Shield_impact" to="Shield_impact" method="_on_body_entered"]

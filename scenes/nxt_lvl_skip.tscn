@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvbwj3idmjwhj"]
+
+[ext_resource type="Script" path="res://scripts/nxt_lvl_skip.gd" id="1_o3x8k"]
+
+[node name="nxt_lvl_skip" type="Node2D"]
+z_index = 3
+script = ExtResource("1_o3x8k")
+
+[node name="skp" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+text = "skip"
+
+[connection signal="pressed" from="skp" to="." method="_on_skp_pressed"]

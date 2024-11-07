@@ -1,47 +1,74 @@
-[gd_scene load_steps=4 format=3 uid="uid://etrf6rjufvlk"]
+[gd_scene load_steps=7 format=3 uid="uid://c1hmey0ot6hhl"]
 
-[ext_resource type="Script" path="res://scripts/Label.gd" id="1_thy4b"]
-[ext_resource type="Script" path="res://scripts/Score_label.gd" id="2_ice8y"]
-[ext_resource type="Script" path="res://scripts/level_label.gd" id="3_wsqjy"]
+[ext_resource type="FontFile" uid="uid://bgvt7v5cyhefk" path="res://Font/Sportive-Italic.ttf" id="1_uev6r"]
+[ext_resource type="FontFile" uid="uid://dtwjhf4gxq5u2" path="res://Font/Sportive-Regular.ttf" id="2_18cru"]
+[ext_resource type="FontFile" uid="uid://7rtjtqxwj3i3" path="res://Font/Impact.ttf" id="3_puypf"]
+[ext_resource type="PackedScene" uid="uid://daljfav7x3svc" path="res://scenes/game_over.tscn" id="4_xxn3f"]
+[ext_resource type="PackedScene" uid="uid://0ha6mjsh1dd1" path="res://scenes/level_progress.tscn" id="5_npx5g"]
+[ext_resource type="PackedScene" uid="uid://b10tryap7kost" path="res://scenes/nxt_lvl.tscn" id="6_mptwu"]
 
-[node name="Hud" type="Node"]
+[node name="Hud" type="Node2D"]
+z_index = 2
 
-[node name="Sector_Label" type="Label" parent="."]
-anchors_preset = -1
-anchor_left = 0.48
-anchor_top = 0.15
-anchor_right = 0.48
-anchor_bottom = 0.15
-offset_left = -119.96
-offset_top = -41.2
-offset_right = 121.04
-offset_bottom = 41.8
-theme_override_font_sizes/font_size = 60
-text = "Sector A"
-script = ExtResource("1_thy4b")
+[node name="Hud_score" type="Node2D" parent="."]
 
-[node name="Score_label" type="Label" parent="."]
-anchors_preset = -1
-anchor_left = 0.131
-anchor_top = 0.199
-anchor_right = 0.131
-anchor_bottom = 0.199
-offset_left = -52.912
-offset_top = -19.952
-offset_right = 52.088
-offset_bottom = 20.048
-text = "Score: "
-script = ExtResource("2_ice8y")
+[node name="Label" type="Label" parent="Hud_score"]
+offset_left = 21.0
+offset_top = 17.0
+offset_right = 183.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_uev6r")
+theme_override_font_sizes/font_size = 26
+text = "1,000101 "
 
-[node name="level_label" type="Label" parent="."]
-anchors_preset = -1
-anchor_left = 0.132
-anchor_top = 0.119
-anchor_right = 0.132
-anchor_bottom = 0.119
-offset_left = -54.064
-offset_top = -15.112
-offset_right = 50.936
-offset_bottom = 24.888
-text = "Score: "
-script = ExtResource("3_wsqjy")
+[node name="lvl" type="Label" parent="Hud_score"]
+offset_left = 976.0
+offset_top = 16.0
+offset_right = 1138.0
+offset_bottom = 39.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_uev6r")
+theme_override_font_sizes/font_size = 26
+text = "0"
+
+[node name="Hud_key" type="Node2D" parent="."]
+z_index = 2
+
+[node name="Label" type="Label" parent="Hud_key"]
+offset_left = 501.0
+offset_top = 217.0
+offset_right = 597.0
+offset_bottom = 256.0
+theme_override_fonts/font = ExtResource("2_18cru")
+theme_override_font_sizes/font_size = 35
+text = "Key G"
+
+[node name="Hud_multiplier" type="Node2D" parent="."]
+
+[node name="Label_shadow" type="Label" parent="Hud_multiplier"]
+offset_left = 140.0
+offset_top = 27.0
+offset_right = 180.0
+offset_bottom = 50.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_puypf")
+theme_override_font_sizes/font_size = 30
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Hud_multiplier"]
+offset_left = 138.0
+offset_top = 25.0
+offset_right = 178.0
+offset_bottom = 65.0
+theme_override_fonts/normal_font = ExtResource("3_puypf")
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+
+[node name="GameOver" parent="." instance=ExtResource("4_xxn3f")]
+
+[node name="Level_progress" parent="." instance=ExtResource("5_npx5g")]
+position = Vector2(400, 16)
+
+[node name="nxt_lvl" parent="." instance=ExtResource("6_mptwu")]
+offset_left = 8.0
+offset_right = 8.0

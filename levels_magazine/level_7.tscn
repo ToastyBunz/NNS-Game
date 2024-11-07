@@ -1,0 +1,22 @@
+[gd_scene load_steps=6 format=3 uid="uid://cklsu3ic8xqnd"]
+
+[ext_resource type="PackedScene" uid="uid://tmsdkwr7xik0" path="res://scenes/interval_background.tscn" id="1_rbnku"]
+[ext_resource type="Script" path="res://scripts/level_7.gd" id="1_xu1ax"]
+[ext_resource type="PackedScene" uid="uid://rym22y83e0pf" path="res://scenes/planet.tscn" id="2_lwjxh"]
+[ext_resource type="PackedScene" uid="uid://jc3g6s4pmt2i" path="res://scenes/Legend.tscn" id="3_iogt1"]
+[ext_resource type="PackedScene" uid="uid://qdi61gwdth1x" path="res://scenes/mouse_diamond.tscn" id="4_c7grv"]
+
+[node name="level_7" type="Node2D"]
+script = ExtResource("1_xu1ax")
+
+[node name="Interval_Background" parent="." instance=ExtResource("1_rbnku")]
+position = Vector2(-1, 0)
+
+[node name="Planet" parent="." instance=ExtResource("2_lwjxh")]
+position = Vector2(-1, 0)
+
+[node name="Node2D" parent="." instance=ExtResource("3_iogt1")]
+position = Vector2(-8, -5)
+
+[node name="mouse_diamond" parent="." instance=ExtResource("4_c7grv")]
+z_index = 3

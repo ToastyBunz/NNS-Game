@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://ksue0t6f35nl"]
+
+[ext_resource type="PackedScene" uid="uid://c0vwifqyy0qub" path="res://scenes/explosion.tscn" id="1_bw40t"]
+
+[node name="Explosion_magazine" type="Node2D"]
+
+[node name="explosion" parent="." instance=ExtResource("1_bw40t")]
+
+[node name="explosion2" parent="." instance=ExtResource("1_bw40t")]
+
+[node name="explosion3" parent="." instance=ExtResource("1_bw40t")]
+
+[node name="explosion4" parent="." instance=ExtResource("1_bw40t")]
+
+[node name="explosion5" parent="." instance=ExtResource("1_bw40t")]
+
+[node name="explosion6" parent="." instance=ExtResource("1_bw40t")]
+
+[node name="explosion7" parent="." instance=ExtResource("1_bw40t")]

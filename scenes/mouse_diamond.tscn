@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://qdi61gwdth1x"]
+
+[ext_resource type="Script" path="res://scripts/Node2D.gd" id="1_8idnr"]
+[ext_resource type="Texture2D" uid="uid://brs7ejodbdxwl" path="res://sprites/Polygon 23.png" id="2_1ban1"]
+
+[node name="mouse_diamond" type="Node2D"]
+script = ExtResource("1_8idnr")
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(577, 362)
+
+[node name="tri_dim" type="Sprite2D" parent="Node2D"]
+position = Vector2(47.6, -3.99997)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_1ban1")
+
+[node name="dim_label" type="Label" parent="Node2D/tri_dim"]
+offset_left = -76.5001
+offset_top = -30.0001
+offset_right = -7.50009
+offset_bottom = 18.9999
+theme_override_font_sizes/font_size = 35
+text = "Dim"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="tri_min" type="Sprite2D" parent="Node2D"]
+position = Vector2(-47.2, -3.99997)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_1ban1")
+flip_h = true
+
+[node name="min_label" type="Label" parent="Node2D/tri_min"]
+offset_left = 10.4999
+offset_top = -30.0001
+offset_right = 75.4999
+offset_bottom = 18.9999
+theme_override_font_sizes/font_size = 35
+text = "min"
+horizontal_alignment = 1
+vertical_alignment = 1

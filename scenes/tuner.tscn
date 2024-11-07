@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cuxa7knojpd23"]
+
+[ext_resource type="Script" path="res://scripts/tuner.gd" id="1_uy78x"]
+
+[sub_resource type="AudioStreamMicrophone" id="AudioStreamMicrophone_facy1"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_uy78x")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamMicrophone_facy1")
+autoplay = true
+bus = &"AudioInput"
